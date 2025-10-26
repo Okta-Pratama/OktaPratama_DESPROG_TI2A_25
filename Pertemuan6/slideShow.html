@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="syleSlideShow.css">
+    <script>
+      var i = -1;
+
+      $(document).ready(function () {
+        $(".slidertitle, #slider img").hide();
+        showNextImage();
+        setInterval("showNextImage()", 3000);
+      });
+
+      function showNextImage() {
+        i++;
+
+        $("#sliderImage" + i)
+          .delay(1100)
+          .fadeOut(1100);
+        $("#title" + i)
+          .delay(1100)
+          .fadeOut(1100);
+
+        $("#sliderImage" + (i + 1))
+          .appendTo("#slider")
+          .fadeIn(1100);
+        $("#title" + (i + 1))
+          .appendTo("#slider")
+          .fadeIn(1100);
+
+        if (i >= 3) {
+          i = -1;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="slider">
+      <img id="sliderImage1" src="img/image1.jpeg" alt="Gambar 1" />
+      <div class="slidertitle" id="title1">Gambar 1</div>
+
+      <img id="sliderImage2" src="img/image2.jpeg" alt="Gambar 2" />
+      <div class="slidertitle" id="title2">Gambar 2</div>
+
+      <img id="sliderImage3" src="img/image3.jpeg" alt="Gambar 3" />
+      <div class="slidertitle" id="title3">Gambar 3</div>
+    </div>
+  </body>
+</html>

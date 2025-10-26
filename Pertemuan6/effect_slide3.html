@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" src="jquery-3.7.1.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#flip").click(function () {
+          $("#kotak2").slideToggle("slow");
+        });
+      });
+    </script>
+    <style>
+      #kotak2,
+      #flip {
+        padding: 5px;
+        text-align: center;
+        background-color: #aaf;
+        border: solid 2px #000;
+        border-radius: 5px;
+      }
+      #kotak2 {
+        padding: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="flip">Klik untuk efek slide</div>
+    <div id="kotak2">Selamat Pagi</div>
+  </body>
+</html>
