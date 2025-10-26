@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" href="img/K3-YellowBg.png" type="image/x-icon">
+  <title>Contact</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="container container-navbar">
+        <div class="navbar-brand">
+          <img src="img/K3-YellowBg.png" alt="logo white" class="navbar-brand-img">
+          <div class="navbar-brand-name">
+            Sumber Rezeki
+          </div>
+        </div>
+        <div class="navbar-link">
+          <a href="https://k3-sumber-rezeky.vercel.app/index.html"
+            class="navbar-link-item navbar-link-hover-animation"><i class="fa fa-home"></i>Beranda</a>
+
+          <div class="drop-down-wrapper">
+            <a class="navbar-link-item navbar-link-hover-animation drop-down-navbar">
+              <i class="fa fa-chevron-down"></i> K3-SR
+            </a>
+            <div class="drop-down-content">
+              <a class="navbar-link-item" href="https://k3-sumber-rezeky.vercel.app/keselamatanKerja.html">Keselamatan
+                Kerja</a>
+              <a class="navbar-link-item" href="https://k3-sumber-rezeky.vercel.app/kesehatanKerja.html">Kesehatan
+                Kerja</a>
+              <a class="navbar-link-item"
+                href="https://k3-sumber-rezeky.vercel.app/lingkunganKerjaFisik.html">Lingkungan Kerja Fisik</a>
+              <a class="navbar-link-item" href="https://k3-sumber-rezeky.vercel.app/landasanHukum.html">Landasan
+                Hukum</a>
+              <a class="navbar-link-item" href="https://k3-sumber-rezeky.vercel.app/apd.html">Alat Pelindung Diri</a>
+              <a class="navbar-link-item" href="https://k3-sumber-rezeky.vercel.app/pp.html">Pertolongan Pertama</a>
+              <a class="navbar-link-item" href="https://k3-sumber-rezeky.vercel.app/organisasi.html">Organisasi
+                Perusahaan</a>
+              <a class="navbar-link-item" href="https://k3-sumber-rezeky.vercel.app/manajemenResiko.html">Manajement
+                Resiko</a>
+            </div>
+          </div>
+
+
+          <a href="https://k3-sumber-rezeky.vercel.app/about-us.html"
+            class="navbar-link-item navbar-link-hover-animation"><i class="fa fa-globe"></i>Tentang Kami</a>
+          <a href="#" class="navbar-link-item navbar-link-hover-animation"><i class="fa fa-comments"></i>Kontak</a>
+        </div>
+        <div data-aos-duration="1500" data-aos-delay="300" data-aos="zoom-out-left" class="navbar-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="container container-hero">
+      <h1>
+        Wujudkan Proyek Impian Anda
+      </h1>
+      <p>
+        Layanan pemesanan pekerja bangunan dan kontraktor terpercaya dengan mudah dan cepat.
+      </p>
+      <a href="#form-section" class="btn-primary">
+        <i class="fas fa-calendar-alt"></i> Mulai Pemesanan Sekarang
+      </a>
+    </div>
+  </section>
+
+  <section id="form-section" class="form-card">
+    <div class="container container-form-card">
+      <h2>Formulir Pemesanan Jasa</h2>
+
+      <form id="projectBookingForm" method="POST" action="booking.php">
+
+        <div class="form-group">
+          <label for="fullName">Nama Lengkap Anda</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Masukkan nama lengkap" class="input-field"
+            required>
+          <p id="error-fullName" class="error-message">Nama lengkap wajib diisi minimal 3 karakter.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Alamat Email</label>
+          <input type="email" id="email" name="email" placeholder="contoh@email.com" class="input-field" required>
+          <p id="error-email" class="error-message">Format email tidak valid atau kosong.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="serviceType">Jenis Layanan yang Dibutuhkan</label>
+          <select id="serviceType" name="serviceType" class="input-field" required>
+            <option value="" disabled selected>Pilih salah satu layanan</option>
+            <option value="Bangunan Baru">Proyek Bangunan Baru</option>
+            <option value="Renovasi">Renovasi Rumah/Gedung</option>
+            <option value="Jasa Tukang Harian">Jasa Tukang Harian</option>
+            <option value="Instalasi Listrik">Instalasi Listrik & Pipa</option>
+            <option value="Lainnya">Lainnya</option>
+          </select>
+          <p id="error-serviceType" class="error-message">Jenis layanan wajib dipilih.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="location">Lokasi Proyek (Kota/Kabupaten)</label>
+          <input type="text" id="location" name="location" placeholder="Contoh: Jakarta Selatan" class="input-field"
+            required>
+          <p id="error-location" class="error-message">Lokasi proyek wajib diisi minimal 2 karakter.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="projectDescription">Deskripsi Detail Proyek</label>
+          <textarea id="projectDescription" name="projectDescription" rows="4"
+            placeholder="Jelaskan kebutuhan proyek Anda secara detail (minimal 20 karakter)" class="input-field"
+            required></textarea>
+          <p id="error-projectDescription" class="error-message">Deskripsi minimal 20 karakter.</p>
+        </div>
+
+        <div class="submit-container">
+          <button type="submit" id="submitButton" class="btn-submit">
+            <i class="fas fa-paper-plane"></i> Ajukan Pemesanan Proyek
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container container-footer">
+      <img src="img/C1.png" class="bg-footer">
+      <div class="footer-info">
+
+        <div class="info">
+          <div class="footer-title">
+            Follow Us
+          </div>
+          <div class="spacer-info">
+            <img src="img/decor-title.svg" alt="">
+          </div>
+          <a href="#" class="footer-wrapper">
+            <div class="footer-icon"><i class="fa fa-linkedin"></i></div>
+            <div class="footer-title-1">linkedin</div>
+          </a>
+          <a href="https://www.instagram.com/Oktxip_/" class="footer-wrapper">
+            <div class="footer-icon"><i class="fa fa-instagram"></i></div>
+            <div class="footer-title-1">Instagram</div>
+          </a>
+          <a href="https://github.com/Oktxip/Oktxip.github.io" class="footer-wrapper">
+            <div class="footer-icon"><i class="fa fa-github"></i></div>
+            <div class="footer-title-1">github</div>
+          </a>
+        </div>
+
+        <div class="info">
+          <div class="footer-title">
+            contact
+          </div>
+          <div class="spacer-info">
+            <img src="img/decor-title.svg" alt="">
+          </div>
+          <a href="mailto:Oktaiwp849@gmail.com" class="footer-wrapper">
+            <div class="footer-icon"><i class="fa fa-envelope"></i></div>
+            <div class="footer-title-1">SumberRezeki@gmail.com</div>
+          </a>
+          <a href="index.html" class="footer-wrapper">
+            <div class="footer-icon"><i class="fa fa-user"></i></div>
+            <div class="footer-title-1">Sumber Rezeki</div>
+          </a>
+          <a href="contact.html" class="footer-wrapper">
+            <div class="footer-icon"><i class="fa fa-comments"></i></div>
+            <div class="footer-title-1">contact</div>
+          </a>
+        </div>
+
+        <div class="info">
+          <div class="footer-title">
+            Pengalaman
+          </div>
+          <div class="spacer-info">
+            <img src="img/decor-title.svg" alt="">
+          </div>
+          <div class="footer-text">
+            Dengan lebih dari 10 tahun pengalaman, kami telah membantu lebih dari 500 proyek konstruksi di berbagai
+            skala."
+          </div>
+        </div>
+
+      </div>
+      <div class="footer-cr">
+        Copyright &copy; by Okta Pratama
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>    
+    
+
+</body>
+
+</html>

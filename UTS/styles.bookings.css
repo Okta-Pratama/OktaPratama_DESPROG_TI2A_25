@@ -1,0 +1,115 @@
+
+        :root {
+            --primary-color: rgb(255, 217, 0); /* Biru Primer */
+            --bg-light: #f0f4f8;      /* Latar belakang ringan */
+            --text-dark: #1f2937;
+            --success-color: #10b981;
+            --error-color: #ef4444;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-light); 
+            margin: 0; 
+            padding: 0; 
+            color: var(--text-dark);
+        }
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        h1 {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .table-responsive {
+            overflow-x: auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .booking-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px; /* Lebar minimal untuk tampilan mobile */
+        }
+        .booking-table th, .booking-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .booking-table th {
+            background-color: #e0f2f1; /* Warna header ringan */
+            color: #0d9488; /* Warna teks header */
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.875rem;
+        }
+        .booking-table tr:hover {
+            background-color: #f9fafb;
+        }
+        .no-data {
+            text-align: center;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-top: 2rem;
+        }
+        .btn-back { 
+            display: inline-block; 
+            background-color: var(--primary-color); 
+            color: white; 
+            padding: 0.75rem 1.5rem; 
+            text-decoration: none; 
+            border-radius: 9999px; 
+            transition: background-color 0.3s; 
+            margin-top: 1rem; 
+            font-weight: 600; 
+        }
+        .btn-back:hover { background-color: #1e4b9a; }
+        .service-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+        }
+        .tag-renovasi { background-color: #f59e0b; }
+        .tag-bangun { background-color: #10b981; }
+        .tag-desain { background-color: #3b82f6; }
+        .tag-lainnya { background-color: #6b7280; }
+
+        @media (max-width: 700px) {
+            .booking-table thead {
+                display: none; /* Sembunyikan header tabel di mobile */
+            }
+            .booking-table, .booking-table tbody, .booking-table tr, .booking-table td {
+                display: block;
+            }
+            .booking-table tr {
+                margin-bottom: 1rem;
+                border: 1px solid #e5e7eb;
+                border-radius: 8px;
+            }
+            .booking-table td {
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+            }
+            .booking-table td::before {
+                /* Label kolom di mobile */
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 1rem;
+                font-weight: 600;
+                text-align: left;
+                color: var(--primary-color);
+            }
+        }

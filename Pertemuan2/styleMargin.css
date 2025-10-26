@@ -1,0 +1,19 @@
+h1 {
+    color: pink;
+    font-family: Trebuchet MS;
+    text-align: center;
+}
+
+.box {
+    background: blue;
+    height: 200px;
+    width: 300px;
+    margin: 300px;
+}
+
+.box-dua {
+    background: black;
+    height: 100px;
+    width: 200px;
+    margin-left: 500px;
+}
